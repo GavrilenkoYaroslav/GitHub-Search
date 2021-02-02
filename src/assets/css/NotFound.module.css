@@ -1,0 +1,17 @@
+.homeForTheLama {
+    width: 100%;
+    height: calc(100% - 120px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeForTheLama h1 {
+    color: slategrey;
+}
+
+.homeForTheLama a {
+    text-decoration: none;
+    color: cornflowerblue;
+}
