@@ -17,7 +17,7 @@ export const App: React.FC = () => {
                     <Route exact path={'/'} render={() => <HomePage/>}/>
                     <Route exact path={'/user/:login'} render={ withSuspense(UserPage) }/>
                     <Route exact path={'/404'} render={ withSuspense(NotFound) }/>
-                    <Route path={'*'} render={() => <Redirect exact to={'/404'}/>}/>
+                    <Route path={'*'} render={() => <Redirect to={'/404'}/>}/>
                 </Switch>
             </div>
         </HashRouter>

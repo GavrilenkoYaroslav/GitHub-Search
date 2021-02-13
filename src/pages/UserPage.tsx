@@ -60,23 +60,24 @@ const UserPage: React.FC = () => {
         <>
         <hr/>
             <span onClick={()=> history.push('/')} className={styles.goBack}>Go back</span>
+
             {loading && <Preloader/>}
 
             {user && <>
                 <div className={styles.info}>
                     <img src={user.avatar_url} alt={''}/>
                     <div>
-                        <span>{`Name: ${user.name}`}</span>
+                        <span>{`Name: ${user.name ? user.name : '-'}`}</span>
                         <span>{`Email: ${user.email ? user.email : '-'}`}</span>
-                        <span>{`Location: ${user.location}`}</span>
-                        <span>{`Join Date: ${user.created_at.slice(0,10)}`}</span>
+                        <span>{`Location: ${user.location ? user.location : '-'}`}</span>
+                        <span>{`Join Date: ${user.created_at ? user.created_at.slice(0,10) : '-'}`}</span>
                         <span>{`Followers: ${user.followers}`}</span>
                         <span>{`Following: ${user.following}`}</span>
                     </div>
                 </div>
 
                 <div className={styles.bio}>
-                    {user.bio}
+                    {!!user.bio && user.bio}
                 </div>
 
                 <div className={styles.searchbar}>
