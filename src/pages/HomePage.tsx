@@ -1,10 +1,9 @@
-import React, {ChangeEvent, SetStateAction, SyntheticEvent, useEffect, useState} from 'react';
+import React, {ChangeEvent, useEffect, useState} from 'react';
 import styles from '../assets/css/HomePage.module.css';
 import {API, userSearchType} from "../api/api";
 import {User} from "../components/User";
 import {useDebouncedCallback} from "use-debounce";
 import {Preloader} from "../components/Preloader";
-import {string} from "prop-types";
 
 export const HomePage = () => {
     const [term, setTerm] = useState<string>('');
